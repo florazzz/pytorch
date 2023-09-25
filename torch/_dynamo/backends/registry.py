@@ -11,7 +11,7 @@ class CompiledFn(Protocol):
         ...
 
 
-CompilerFn = Callable[[fx.GraphModule, List[torch.Tensor]], CompiledFn]
+CompilerFn = Callable[[fx.GraphModule, List[torch.Tensor], Optional[Union[str, dict]]], CompiledFn]
 
 _BACKENDS: Dict[str, CompilerFn] = dict()
 
