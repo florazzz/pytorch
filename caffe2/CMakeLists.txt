@@ -1011,6 +1011,7 @@ elseif(USE_CUDA)
     target_link_libraries(torch_cuda_linalg PRIVATE
         torch_cpu
         torch_cuda
+        ${BLAS_LIBRARIES}
     )
     if($ENV{ATEN_STATIC_CUDA})
       if(CUDA_VERSION_MAJOR LESS_EQUAL 11)
