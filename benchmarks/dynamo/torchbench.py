@@ -88,13 +88,14 @@ SKIP = {
 SKIP_FOR_CPU = {
     "hf_T5_generate",  # OOMs
     "cm3leon_generate",  # model is CUDA only
-    "nanogpt_generate",  # timeout
+    "nanogpt",  # timeout
     "sam",  # timeout
     "llama_v2_7b_16h",  # model is CUDA only
     "stable_diffusion",  # flaky
     "torchrec_dlrm",  # requires FBGEMM, CUDA only
     "simple_gpt",
     "hf_Whisper",  # works on cuda, accuracy failure on cpu
+    "stable_diffusion_text_encoder",
 }
 
 SKIP_FOR_CUDA = {
@@ -222,6 +223,7 @@ SKIP_ACCURACY_CHECK_MODELS = {
     "maml",  # accuracy https://github.com/pytorch/pytorch/issues/93847
     "llama_v2_7b_16h",
     "Background_Matting",
+    "stable_diffusion_unet",
 }
 
 SKIP_ACCURACY_CHECK_AS_EAGER_NON_DETERMINISTIC_MODELS = {
